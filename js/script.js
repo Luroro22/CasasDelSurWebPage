@@ -10,27 +10,33 @@ navLinks.forEach(link => {
         link.classList.add('active');
     }
 });
+
 // Seleccionar el botón hamburguesa y el menú
 const menuToggle = document.querySelector('.navbar-toggler');
 const navbar = document.querySelector('#navbarNav');
 
-// Alternar menú al hacer clic en el botón hamburguesa
+// Alternar el menú y cambiar el ícono de hamburguesa a cerrar
 menuToggle.addEventListener('click', () => {
+    navbar.classList.toggle('show'); // Alterna la clase 'show' para abrir o cerrar el menú
+
+    // Cambiar el estado del ícono
     if (navbar.classList.contains('show')) {
-        navbar.classList.remove('show'); // Cierra el menú si está abierto
+        menuToggle.classList.add('show'); // Muestra el ícono de cerrar
     } else {
-        navbar.classList.add('show'); // Abre el menú si está cerrado
+        menuToggle.classList.remove('show'); // Muestra el ícono de hamburguesa
     }
 });
 
-// Cerrar menú al hacer clic en un enlace
+// Cerrar el menú al hacer clic en un enlace (opcional)
 const navbarLinks = document.querySelectorAll('.nav-link');
 
 navbarLinks.forEach(link => {
     link.addEventListener('click', () => {
-        navbar.classList.remove('show'); // Cierra el menú al seleccionar un enlace
+        navbar.classList.remove('show');
+        menuToggle.classList.remove('show'); // Vuelve al ícono de hamburguesa
     });
 });
+
 
 let currentImageIndex = 0;
 let images = [];

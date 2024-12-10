@@ -339,7 +339,7 @@ footer {
     background: none;
     border: none;
     color: rgb(255, 255, 255); /* Contraste mejorado */
-    font-size: 36px;
+    font-size: 50px;
     cursor: pointer;
     transform: translateY(-50%);
     z-index: 10; /* Asegura que esté visible */
@@ -348,11 +348,11 @@ footer {
 }
 
 .navigation #prev-button {
-    left: 5%; /* Más cerca del borde para centrado visual */
+    left: 15%; /* Más cerca del borde para centrado visual */
 }
 
 .navigation #next-button {
-    right: 5%;
+    right: 15%;
 }
 
 
@@ -786,6 +786,15 @@ button:hover {
 
 
 
+
+
+
+
+
+
+
+
+
 /* Media Queries Responsivos */
 
 /* Pantallas pequeñas */
@@ -1042,11 +1051,19 @@ button:hover {
     }
 
     #close-button {
-        font-size: 18px; /* Tamaño reducido */
+        font-size: 35px; /* Tamaño reducido */
+        margin-top: -2%;
     }
 
     .navigation button {
-        font-size: 28px; /* Reduce tamaño de flechas */
+        font-size: 60px; /* Reduce tamaño de flechas */
+    }
+    .navigation #prev-button {
+        left: 5%; /* Más cerca del borde para centrado visual */
+    }
+    
+    .navigation #next-button {
+        right: 5%;
     }
 }
     
