@@ -136,7 +136,7 @@ header {
     justify-content: space-between; /* Distribuye los elementos uniformemente */
     margin-left: 8%; /* Elimina márgenes extra */
     padding: 0; /* Elimina el padding extra */
-    gap: 35%;
+    gap: 22%;
      width: 50%; /* Asegura que ocupe el 100% del ancho */
 }
 
@@ -783,6 +783,137 @@ button:hover {
     font-size: 0.9rem;
     line-height: 1.5;
   }
+
+
+  .image-grid3 {
+    margin-top: 20px;
+    margin-left: 5%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columnas iguales */
+    gap: 50px;
+    padding: 20px;
+  }
+  
+  .image-item3 a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  .image-container3 {
+    width: 260px;
+    height: 260px;
+    margin-top: 10%;
+    position: relative;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;   
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    -webkit-box-shadow: 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e;
+    box-shadow: 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e;
+    -webkit-transform: translateX(0) translateY(0);
+    transform: translateX(0) translateY(0);
+  }
+  
+  .image-container3:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    animation: shadow-pop-tr 0.3s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
+  }
+  
+  .image-container3 img {
+    display: block;
+    width: 100%;
+    height: 82%;
+    border-bottom: 2px solid #c7c6c6;
+  }
+  
+  .image-caption3 {
+    text-align: center;
+    font-size: 1rem;
+    font-weight: bold;
+    margin: 0;
+    color: #333;
+    padding: 10px;
+    flex-shrink: 0;
+  }
+
+  .conteiner-text h2 {
+    font-weight: 400;
+
+  }
+  .conteiner-text{
+    
+    background-color: #e9e7e7;
+    text-align: left;
+    margin: 20px;
+    margin-left: 15%;
+    width: 70%;
+    padding: 10px;
+  }
+  
+  /* ----------------------------------------------
+   * Animation: shadow-pop-tr
+   * ---------------------------------------------- */
+  @-webkit-keyframes shadow-pop-tr {
+    0% {
+      -webkit-box-shadow: 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e;
+              box-shadow: 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e;
+      -webkit-transform: translateX(0) translateY(0);
+              transform: translateX(0) translateY(0);
+    }
+    100% {
+      -webkit-box-shadow: 1px -1px #3e3e3e, 2px -2px #3e3e3e, 3px -3px #3e3e3e, 4px -4px #3e3e3e;
+              box-shadow: 1px -1px #3e3e3e, 2px -2px #3e3e3e, 3px -3px #3e3e3e, 4px -4px #3e3e3e;
+      -webkit-transform: translateX(-8px) translateY(8px);
+              transform: translateX(-8px) translateY(8px);
+    }
+  }
+  
+  @keyframes shadow-pop-tr {
+    0% {
+      -webkit-box-shadow: 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e;
+              box-shadow: 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e;
+      -webkit-transform: translateX(0) translateY(0);
+              transform: translateX(0) translateY(0);
+    }
+    100% {
+      -webkit-box-shadow: 1px -1px #3e3e3e, 2px -2px #3e3e3e, 3px -3px #3e3e3e, 4px -4px #3e3e3e;
+              box-shadow: 1px -1px #3e3e3e, 2px -2px #3e3e3e, 3px -3px #3e3e3e, 4px -4px #3e3e3e;
+      -webkit-transform: translateX(-8px) translateY(8px);
+              transform: translateX(-8px) translateY(8px);
+    }
+  }
+/* Botón "Volver" flotante */
+.volver-button {
+    position: absolute;
+    bottom: 410px; /* Distancia desde la parte inferior */
+    right: 20px;  /* Distancia desde el borde derecho */
+    background-color:#b10101; /* Color de fondo */
+    color: white; /* Color del texto */
+    border: none;
+    border-radius: 5px; /* Bordes redondeados */
+    padding: 10px 15px; /* Espaciado interno */
+    font-size: 16px; /* Tamaño de texto */
+    font-weight: bold; /* Negrita */
+    text-decoration: none; /* Sin subrayado */
+    display: inline-block; /* Asegura que funcione como botón */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    cursor: pointer; /* Cambia el cursor al pasar por encima */
+    z-index: 1000; /* Asegura que esté en la parte superior */
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    width: 9%;
+    text-align: center;
+  }
+  
+  .volver-button:hover {
+    background-color: #e00303b2; /* Color más oscuro al pasar el mouse */
+    transform: scale(1.1); /* Efecto de ampliación */
+  }
+
+  
 
 
 
